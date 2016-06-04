@@ -1,5 +1,6 @@
 <?php include_once "header.php";?>
 <body>
+    <?$pageTitle = 'Index';?>
     <div class="animatedParent">
         <nav class="animated fadeInDown">
             <a href="#">work</a>
@@ -59,3 +60,4 @@
 </body>
 
 </html>
+<?$pageContents = ob_get_contents ();ob_end_clean ();echo str_replace ('<!--TITLE-->', $pageTitle, $pageContents);?>
