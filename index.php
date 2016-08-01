@@ -1,12 +1,7 @@
 <?php include_once "header.php";?>
 <body>
-    <?$pageTitle = 'Index';?>
-    <div class="animatedParent">
-        <nav class="animated fadeInDown">
-            <a href="#">work</a>
-            <a href="#">photography</a>
-        </nav>
-    </div>
+    <?$pageTitle = '';?>
+    <?php include_once "nav.php";?>
     <div class="hero">
         <div class="col-pp-10 display-flex items-center-h animatedParent">
             <div class="text-box item-center-v animated tada">
@@ -14,7 +9,7 @@
             </div>
         </div>
         <div class="col-pp-10 display-flex items-center-h">
-            <img src="img/me.png" class="item-bottom animated slideInUp"/>
+            <img src="img/me.jpg" class="item-bottom animated slideInUp"/>
         </div>
     </div>
     <div class="home-section">
@@ -46,18 +41,7 @@
             </div>
         </div>
     </div>
-    <footer class="animatedParent">
-        <div class="footer-links animated fadeInUpShort">
-            <a href="#">Google Plus</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-        </div>
-        <p class="animated fadeInDownShort">Nathan Yiangsupapaanontr</p>
-    </footer>
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="js/css3-animate-it.js"></script>
+    <?php include_once "footer.php";?>
 </body>
-
 </html>
-<?$pageContents = ob_get_contents ();ob_end_clean ();echo str_replace ('<!--TITLE-->', $pageTitle, $pageContents);?>
+<?php include_once "pagetitle.php";?>
